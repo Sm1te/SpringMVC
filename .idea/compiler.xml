@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="1-servlet" />
+        <module name="3-hellomvc2" />
+        <module name="2-hellomvc" />
+        <module name="4-test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="3-deepmvc" target="16" />
+      <module name="4-annotation-springmvc" target="8" />
+      <module name="4-hellomvc-annotation" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

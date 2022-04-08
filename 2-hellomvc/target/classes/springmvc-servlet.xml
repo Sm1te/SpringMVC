@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置一个URL处理器以及一个URL适配器:
+         作用是将URL去匹配Spring中有哪一个Controller去处理它 -->
+
+    <!-- 处理器映射器 -->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+    <!-- 处理器适配器 -->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+    <!-- InternalResourceViewResolver: 表示视图解析器
+         主要处理DispatcherServlet（中心控制器）给它的ModelAndView (模型视图)
+         常用的模板引擎包括Thymeleaf和FreeMaker等 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+        <!-- 前缀 -->
+        <property name="prefix" value="/jsp/"/>
+        <!-- 后缀 -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--注册Bean信息，将HelloController控制器交给Spring容器管理-->
+    <bean id="/hello" class="com.robin.controller.HelloController"></bean>
+
+</beans>
